@@ -254,7 +254,7 @@ mod node {
             };
 
             let addr = next_node.get_src_socket_addr();
-            println!("IP is: {:?} PORT is {:?}", addr.ip(), addr.port());
+            println!("CONNECTING TO: [{:?}:{:?}]", addr.ip(), addr.port());
             let mut socket = self.connect_to_successor(addr);
             let (mins, maxs) = self.split_range();
             println!("    Other hash-range is {:?}", (mins, maxs));
